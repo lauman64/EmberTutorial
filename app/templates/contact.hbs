@@ -1,8 +1,30 @@
 <h1>Contact Page</h1>
 <div>
-    <ul>
-        <li>Alan</li>
-        <li>32 Ice Cream Lane</li>
-        <li>031 367 1984</li>
-    </ul>
+    {{!-- <div class="form-horizontal form-group form-group-lg row">
+        {{input type="email" value=emailAddress class="form-control form-input" placeholder="Please type your email address" autofocus="autofocus"}}
+        {{textarea class="form-control form-input" placeholder="Your message. (At least 5 characters.)" rows="7" value=message}}
+        <button class="btn btn-lg btn-primary btn-block" disabled={{isDisabled}} {{action 'sendMessage'}}>Send Message</button>
+    </div> --}}
+
+    <div class="form-horizontal form-group form-group-lg row">
+        <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-5 col-md-offset-2 form-inputs">
+            {{input type="email" value=emailAddress class="form-control" placeholder="Please type your email address" autofocus="autofocus"}}
+        </div>
+        <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-5 col-md-offset-2 form-inputs">
+            {{textarea class="form-control" placeholder="Your message. (At least 5 characters.)" rows="7" value=message}}
+        </div>
+        <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-5 col-md-offset-2 form-inputs">
+            <button class="btn btn-lg btn-primary btn-block" disabled={{isDisabled}} {{action 'sendMessage'}}>Send Message</button>
+        </div>
+
+        <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-5 col-md-offset-2 center-font">
+            {{#if responseMessage}}
+                <div class="alert alert-success">
+                    {{responseMessage}}
+                    <span class="glyphicon glyphicon-ok"></span>
+                </div>
+            {{/if}}
+        </div>
+    </div>
+    
 </div>
